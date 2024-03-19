@@ -1,0 +1,25 @@
+<header>
+    <!-- Navigation -->
+    <a id="logo" href="/"><img id="logo-img" src="https://www.arsenal.com/themes/custom/arsenal_main/logo.svg" /></a>
+
+    <nav>
+      <div>
+        <a href="/catalog">Players</a>
+      </div>
+
+      <!-- Logged-in users -->
+      <div class="user">
+        <a href="/create">New Signings</a>
+        <a href="/search"> Search </a>
+        <a id = "logoutBtn" href="javascript:void(0)">Logout</a>
+      </div>
+
+      <!-- Guest users -->
+      <div *ngIf = "!isLoggedIn" class="guest">
+        <a routerLink="/login">Login</a>
+        <a routerLink="/register">Register</a>
+      </div>
+
+      
+    </nav>
+  </header>
