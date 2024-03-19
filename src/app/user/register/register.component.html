@@ -33,6 +33,8 @@
       />
 
       <ng-container *ngIf="form.get('rePassword')?.touched">
+        <p class="error" *ngIf="form.get('rePassword')?.errors?.['required']">Password required!</p>
+
         <p class="error" *ngIf="form.get('rePassword')?.errors?.['passwordMatchValidator']">Password doesn't match!</p>
 
       </ng-container>
