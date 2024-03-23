@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewSigningsComponent } from './new-signings/new-signings.component';
+import { HomeComponent } from './home/home.component';
 
 
 
 @NgModule({
   declarations: [
-    NewSigningsComponent,
-
+    HomeComponent
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[HomeComponent]
+
 })
-export class TeamModule { }
+export class HomeModule { }

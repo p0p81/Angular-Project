@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*{
 
+  margin: 0;
+  /* box-sizing: border-box; */
+}
 h1 {
   color: rgb(170, 255, 0);
-  font-size: 20px;
+  font-size: 1em;
   text-align: center;
-  height: 5px
+  /* height: 5px; */
+  /* padding-bottom: 0.2em; */
+ 
 }
 /* body {
     color: rgb(245, 242, 242);
@@ -21,8 +27,7 @@ h1 {
     background-repeat: no-repeat;
       min-height:100vh;
     /* Set margin and padding to zero to remove default spacing */
-    margin: 0;
-    padding: 0;
+   /* padding-top: 0.8em; */
   }
 
   header {
@@ -37,12 +42,15 @@ h1 {
   }
   
   nav {
-    background-color: #7a6e6e;
-    height: 0px;
+    /* background-color: #7a6e6e; */
+ 
     margin-bottom: 15px;
+   align-items: center;
+   padding-top: 10px;
     display: flex;
     justify-content: space-between;
     color: rgb(14, 14, 15);
+   
   }
   
   #logo {
@@ -86,7 +94,7 @@ h1 {
   }
   
   section {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
   }
   
   /* #home {

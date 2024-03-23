@@ -1,45 +1,22 @@
+
+
 <div class="form">
   <h2>Login</h2>
-  <form class="login" #form="ngForm" (ngSubmit)="login(form)">
-    <input
-      type="email"
-      name="email"
-      id="email"
-      placeholder="email"
-      ngModel
-      #inputEmail="ngModel"
-      required
-      [appEmail]="['']"
-    />
+  <form [formGroup]="loginForm" class="login" (ngSubmit)="login()">
+    <input formControlName = "email"type="email" name="email" id="email"placeholder="email" required/>
+    <ng-container *ngIf="loginForm.get('email')?.touched">
+      <p class="error" *ngIf="loginForm.get('email')?.errors?.['required']">Email required!</p>
+      <p class="error" *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email</p>
 
-    <ng-container *ngIf="inputEmail.touched">
-      <p class="error" *ngIf="inputEmail.errors?.['required']">
-        Email required
-      </p>
-      <p class="error" *ngIf="inputEmail.errors?.['emailValidator']">Invalid email</p>
     </ng-container>
-
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="password"
-      ngModel
-      #inputPassword="ngModel"
-      required
-      minlength="6"
-    />
-
-    <ng-container *ngIf="inputPassword.touched">
-      <p class="error" *ngIf="inputPassword.errors?.['required']">
-        Password required!
-      </p>
-      <p class="error" *ngIf="inputPassword.errors?.['minlength']">
-        Password must be at least 6 characters!
-      </p>
+     <input formControlName = "password" type="password" name="password" id="password" placeholder="password" required/>
+     <ng-container *ngIf="loginForm.get('password')?.get('password')?.touched">
+      <p class="error" *ngIf="loginForm.get('password')?.get('password')?.errors?.['required']">Password required!</p>
+      <p class="error" *ngIf="loginForm.get('password')?.get('password')?.errors?.['minlength']">Password too short!</p>
     </ng-container>
-
-    <button type="submit">Login</button>
+    <button type="submit"
+     [disabled]="loginForm.invalid"
+     >Login</button>
     <p class="message">
       Not registered? <a routerLink="/register">Create an account</a>
     </p>

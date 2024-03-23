@@ -1,23 +1,25 @@
 <header>
     <!-- Navigation -->
-    <a id="logo" href="/"><img id="logo-img" src="https://www.arsenal.com/themes/custom/arsenal_main/logo.svg" /></a>
+    <a id="logo" routerLink="/"><img id="logo-img" src="https://www.arsenal.com/themes/custom/arsenal_main/logo.svg" /></a>
 
     <nav>
       <div>
-        <a href="/catalog">Players</a>
+        <a routerLink="/catalog">Players</a>
       </div>
 
       <!-- Logged-in users -->
       <div class="user">
-        <a href="/create">New Signings</a>
-        <a href="/search"> Search </a>
-        <a id = "logoutBtn" href="javascript:void(0)">Logout</a>
+       
+
+        <a *ngIf="isLoggedIn" routerLink="/create">Add Players</a>
+        <a *ngIf="isLoggedIn" routerLink="/search"> Search </a>
+        <a *ngIf="isLoggedIn" class="logout"id = "logoutBtn" (click)="logout()">Logout</a>
       </div>
 
       <!-- Guest users -->
-      <div *ngIf = "!isLoggedIn" class="guest">
-        <a routerLink="/login">Login</a>
-        <a routerLink="/register">Register</a>
+      <div class="guest">
+        <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+        <a *ngIf="!isLoggedIn" routerLink="/register">Register</a>
       </div>
 
       

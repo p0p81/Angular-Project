@@ -3,7 +3,7 @@
 /* Form container */
 .form {
     width: 200px;
-    margin: 0 auto;
+    margin: 8% auto;
     padding: 35px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -42,6 +42,10 @@
     background-color: #0056b3;
   }
   
+  .form button[disabled] {
+    background-color: grey;
+    cursor: not-allowed;
+  }
   /* Message below the form */
   .form .message {
     text-align: center;

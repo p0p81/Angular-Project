@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
-import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayersComponent } from './players/players.component';
 import { UserModule } from './user/user.module';
 import { FormsModule } from '@angular/forms';
+import { appInterceptorProvider } from './app.interceptor';
+import { HomeModule } from './home/home.module';
+import { HomeComponent } from './home/home/home.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    PostsListComponent,
     PlayersComponent,
+//  HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +32,10 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     HttpClientModule,
     AppRoutingModule,
+
+    HomeModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

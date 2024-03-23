@@ -9,10 +9,12 @@ import { SharedModule } from '../shared/shared.module';
 
 
 
+
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+   
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     UserRoutingModule,
     RouterModule, 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   exports: [
     LoginComponent,

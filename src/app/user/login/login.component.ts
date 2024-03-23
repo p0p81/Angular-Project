@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,15 +9,41 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  constructor(private userService: UserService, private router: Router) {}
+export class LoginComponent implements OnInit{
 
-login(form: NgForm) {
-  if (form.invalid) {
-    return;
+
+  constructor(private userService: UserService, private router: Router, private fb: FormBuilder) {}
+  loginForm!: FormGroup;
+
+  ngOnInit(): void {
+    this.loginForm  = this.fb.group({
+      email: ['', [Validators.required, Validators.email, 
+        Validators.minLength(8)
+      ]
+      ],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
   }
-  this.userService.login();
-  this.router.navigate(['/home'])
-}
+ 
+
+  
+
+  login() {
+ 
+    if (this.loginForm.valid) {
+      this.userService.login(this.loginForm.value.email.trim(), this.loginForm.value.password.trim()).subscribe({
+        next: (response)=>{
+          console.log('Login successful', response);
+          this.router.navigate(['/']);
+        },
+        error: (error) => {
+          console.error('Login failed', error);
+       
+        }
+      });
+    }else{
+      console.log('Form is not valid');
+    }
+  }
 
 }
