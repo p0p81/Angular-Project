@@ -4,5 +4,6 @@ export interface Player {
     age: number,
     position: string,
     nationality: string,
+    image: string,
     details: string
 }

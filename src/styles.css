@@ -12,14 +12,7 @@ h1 {
   /* padding-bottom: 0.2em; */
  
 }
-/* body {
-    color: rgb(245, 242, 242);
-    background: #397418;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    font-style: italic;
-  } */
+
   body {
     background-image: url('https://i0.wp.com/www.prime-events.co.uk/wp-content/uploads/2019/12/emirates_stadium.jpg?fit=1920%2C1080&ssl=1');
     background-size: cover;
@@ -42,7 +35,6 @@ h1 {
   }
   
   nav {
-    /* background-color: #7a6e6e; */
  
     margin-bottom: 15px;
    align-items: center;

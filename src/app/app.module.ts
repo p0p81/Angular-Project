@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { appInterceptorProvider } from './app.interceptor';
 import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home/home.component';
+import { TeamModule } from './team/team.module';
 
 
 
@@ -32,6 +33,7 @@ import { HomeComponent } from './home/home/home.component';
     SharedModule,
     HttpClientModule,
     AppRoutingModule,
+    TeamModule,
 
     HomeModule
   ],

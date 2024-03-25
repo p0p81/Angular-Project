@@ -1,0 +1,30 @@
+<div class="form-container">
+<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" formControlName="name">
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" formControlName="age">
+    </div>
+    <div>
+      <label for="position">Position:</label>
+      <input type="text" id="position" name="position" formControlName="position">
+    </div>
+    <div>
+      <label for="nationality">Nationality:</label>
+      <input type="text" id="nationality" name="nationality" formControlName="nationality">
+    </div>
+    <div>
+        <label for="image">Image:</label>
+        <input type="text" id="image" name="image" formControlName="image">
+      </div>
+    <div>
+      <label for="details">Details:</label>
+      <textarea id="details" name="details" formControlName="details"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  

@@ -13,9 +13,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
 
   form = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],   //CHECK  EMAIL_DOMAINS
-    // password: ['',[Validators.required, Validators.minLength(6)]], 
-    // rePassword: ['', [Validators.required, passwordMatchValidator('password', 'rePassword')]],
+    email: ['', [Validators.required, Validators.email]],  
     passGroup: this.fb.group({ 
       password:['', [Validators.required, Validators.minLength(6)]],
       rePassword:['', Validators.required],

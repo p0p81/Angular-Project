@@ -26,4 +26,4 @@ export class EmailDirective implements Validator{
   
   }
 
-}
+};

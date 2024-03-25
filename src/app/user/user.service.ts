@@ -52,23 +52,20 @@ export class UserService {
 
           localStorage.setItem('email', res.email);
         
-          localStorage.setItem('userId', res._id);
+          localStorage.setItem('userId', res._id); 
           this.user$$.next({
-            email: res.email,
-          
+            email: res.email,         
             _id: res._id,
             accessToken: res.accessToken
-          });
-     
+          });    
 
         })
       );
-
   }
 
 
   register(email: string, password: string) {
-    const { apiUrl } = environment
+    const { apiUrl } = environment;
 
     return this.http.post<{ email: string, _id: string, accessToken: string }>(`${apiUrl}/users/register`, {email, password })
       .pipe(
@@ -76,7 +73,7 @@ export class UserService {
           localStorage.setItem('accessToken', res.accessToken);
 
           localStorage.setItem('email', res.email);
-          // localStorage.setItem('username', res.username);
+          
           localStorage.setItem('userId', res._id);
           this.user$$.next({
             email: res.email,
@@ -89,12 +86,6 @@ export class UserService {
       );
   }
 
-
-  // logout() {
-  //   return this.http
-  //   .post('/api/logout', {})
-  //   .pipe(tap(user => this.user$$.next(undefined)))
-  // }
   logout() {
     return this.http.post<User>(`${environment.apiUrl}/users/logout`, {})
       .pipe(

@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewSigningsComponent } from './new-signings/new-signings.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddPlayerComponent } from './add-player/add-player.component';
+import { TeamRoutingModule } from './team-routing.module';
 
 
 
 @NgModule({
   declarations: [
-    NewSigningsComponent,
+
+    AddPlayerComponent,
 
   ],
+
+
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    TeamRoutingModule,
   ]
 })
 export class TeamModule { }
