@@ -2,15 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    min-height: 80vh; 
   }
   
   form {
     width: 300px; 
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    backdrop-filter: blur(12px);
     border-radius: 8px;
     font-size: 16px; 
+    border: 2px solid black;
   }
   
   form div {
@@ -25,6 +27,12 @@
   input[type="text"],
   input[type="number"],
   textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  select { 
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;

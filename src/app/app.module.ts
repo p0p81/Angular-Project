@@ -14,6 +14,8 @@ import { appInterceptorProvider } from './app.interceptor';
 import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home/home.component';
 import { TeamModule } from './team/team.module';
+// import { LoaderComponent } from './spinner/loader/loader.component';
+
 
 
 
@@ -23,6 +25,8 @@ import { TeamModule } from './team/team.module';
     AppComponent,
     MainComponent,
     PlayersComponent,
+    // LoaderComponent,
+ 
 //  HomeComponent
   ],
   imports: [

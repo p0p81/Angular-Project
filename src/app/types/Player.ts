@@ -5,5 +5,6 @@ export interface Player {
     position: string,
     nationality: string,
     image: string,
-    details: string
+    details: string,
+    showDetails?: boolean,
 }

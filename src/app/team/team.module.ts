@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { TeamRoutingModule } from './team-routing.module';
+import { PlayerDetailsComponent } from './player-details/player-details.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 
 
@@ -10,6 +12,8 @@ import { TeamRoutingModule } from './team-routing.module';
   declarations: [
 
     AddPlayerComponent,
+     PlayerDetailsComponent,
+     EditPlayerComponent,
 
   ],
 

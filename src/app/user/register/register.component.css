@@ -2,7 +2,7 @@
 
 /* Form container */
 .form {
-    width: 200px;
+    width: 290px;
     margin: 8% auto;
     padding: 35px;
     border: 1px solid #ccc;
@@ -19,7 +19,7 @@
   
   /* Form inputs */
   .form input {
-    width: 89%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;

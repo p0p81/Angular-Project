@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { TeamService } from '../team/team.service';
+import { Player } from '../types/Player';
 
 @Component({
   selector: 'app-players',
@@ -8,9 +9,24 @@ import { ApiService } from '../api.service';
 })
 export class PlayersComponent implements OnInit {
 
-  constructor(private api:ApiService) {}
+  players: Player[]= [];
+
+  constructor(private teamService: TeamService) {}
 
   ngOnInit(): void {
-    
+    this.fetchPlayers();
   }
+
+fetchPlayers(): void {
+  this.teamService.getAllPlayers().subscribe(
+    (data: Player[]) => {
+      this.players = data;
+    },
+    (error) => {
+      console.error('Error fetching players:', error);
+    }
+  )
+}
+
+
 }

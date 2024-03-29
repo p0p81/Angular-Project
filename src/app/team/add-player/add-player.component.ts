@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Player } from 'src/app/types/Player';
+import { TeamService } from '../team.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-player',
@@ -7,14 +10,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-player.component.css']
 })
 export class AddPlayerComponent implements OnInit {
-  playerForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  addPlayerForm!: FormGroup; // Define FormGroup    
+
+  constructor(private formBuilder: FormBuilder, private teamService: TeamService, private router: Router) { }
 
   ngOnInit(): void {
-    
-    this.playerForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      age: [null, Validators.required],         
+    // Initialize the form with FormBuilder
+    this.addPlayerForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      age: [null, Validators.required],           
       position: ['', Validators.required],
       nationality: ['', Validators.required],
       image:[''],
@@ -23,10 +27,15 @@ export class AddPlayerComponent implements OnInit {
   }
 
  
-  onSubmit() {
-    if (this.playerForm.valid) {
-      console.log(this.playerForm.value);
-      this.playerForm.reset(); // Reset the form after submission
+  createPlayer() {
+    if (this.addPlayerForm.valid) {
+      const playerData: Player = this.addPlayerForm.value;
+      this.teamService.createPlayer(playerData).subscribe(() => {
+        this.router.navigate(['/catalog']);
+        this.addPlayerForm.reset();
+      });
+
+
     }
   }
 }

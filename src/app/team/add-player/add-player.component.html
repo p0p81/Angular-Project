@@ -1,30 +1,36 @@
 <div class="form-container">
-<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="addPlayerForm" (ngSubmit)="createPlayer()">
     <div>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" formControlName="name">
+      <input type="text" id="name" name="name" formControlName="name" placeholder="Name" required/>
     </div>
     <div>
       <label for="age">Age:</label>
-      <input type="number" id="age" name="age" formControlName="age">
+      <input type="number" id="age" name="age" formControlName="age" placeholder="Age" required>
     </div>
     <div>
       <label for="position">Position:</label>
-      <input type="text" id="position" name="position" formControlName="position">
+      <select id="position" name="position" formControlName="position">
+        <option value="">Select Position</option>
+        <option value="Goalkeeper">Goalkeeper</option>
+        <option value="Defense">Defense</option>
+        <option value="Midfield">Midfield</option>
+        <option value="Attack">Attack</option>
+      </select>
     </div>
     <div>
       <label for="nationality">Nationality:</label>
-      <input type="text" id="nationality" name="nationality" formControlName="nationality">
+      <input type="text" id="nationality" name="nationality" formControlName="nationality" placeholder="Nationality" required>
     </div>
     <div>
         <label for="image">Image:</label>
-        <input type="text" id="image" name="image" formControlName="image">
+        <input type="text" id="image" name="image" formControlName="image" placeholder="Image" required>
       </div>
     <div>
       <label for="details">Details:</label>
-      <textarea id="details" name="details" formControlName="details"></textarea>
+      <textarea id="details" name="details" formControlName="details" placeholder="Details" required></textarea>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit">Add Player</button>
   </form>
 </div>
   

@@ -2,14 +2,14 @@
 *{
 
   margin: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 h1 {
   color: rgb(170, 255, 0);
   font-size: 1em;
   text-align: center;
   /* height: 5px; */
-  /* padding-bottom: 0.2em; */
+  padding-bottom: 0.5em;
  
 }
 
