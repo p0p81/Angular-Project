@@ -26,25 +26,33 @@ export class PlayerDetailsComponent implements OnInit {
 
   getPlayerDetails(): void {
    
-    console.log();
+
     if (this.id) {
       this.teamService.getPlayer(this.id).subscribe({
         next: (player: Player) => {
           this.player = player;
-        },
-      });
+        }
+
+        
+      }),
+      (error: any) => {
+        console.error(error)
+      }
+
+    } else {
+      console.error('Id undefined')
     }
   }
 
   deletePlayer(): void {
     if (this.id) {
       if (confirm('Confirm delete!')) {
-        this.teamService.deletePlayer(this.id).subscribe(() => {
-          this.router.navigate(['/catalog'])
-        },
+        this.teamService.deletePlayer(this.id).subscribe({
+         next:()=>{this.router.navigate(['/catalog'])} 
+        }),
         (error: any) => {
           console.error(error)
-        })
+        }
       }
     } else {
       console.error('Id undefined')

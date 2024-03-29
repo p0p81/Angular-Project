@@ -14,7 +14,7 @@ h1 {
 }
 
   body {
-    background-image: url('https://i0.wp.com/www.prime-events.co.uk/wp-content/uploads/2019/12/emirates_stadium.jpg?fit=1920%2C1080&ssl=1');
+    background-image: url('https://wallpapers.com/images/hd/red-aesthetic-arsenal-stadium-bofzvi2xo97r6xlx.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,11 +64,11 @@ h1 {
   header a {
     padding: 0 10px;
     text-decoration: none;
-    color: rgb(18, 18, 19);
+    color: white;
   }
   
   header a:hover {
-    color: rgb(240, 244, 244);
+    color: black;
   }
   
   footer {

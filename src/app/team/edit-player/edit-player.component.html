@@ -1,16 +1,16 @@
-<section class="edit" >
+<section class="edit">
     <div *ngIf="player" class="edit-side">
-        <!-- <img [src]="player.image" alt="Player Image"> -->
-        <h3>{{ player.name }}</h3>
-        <div class="info">
-        <p><strong>Age:</strong> {{player.age}}</p>
-        <p><strong>Position:</strong> {{player.position}}</p>
-        <p><strong>Nationality:</strong> {{player.nationality}}</p>
-        <p><strong>Details:</strong> {{player.details}}</p>
-    </div>
-        <div class="buttons-edit">
-            <button class="edit-btn" (click)="playerEdited()"> Save </button>
-        </div>
+      <img [src]="player.image" alt="Player Image">
+      <h3>{{ player.name }}</h3>
+      <div class="info">
+        <p><strong>Age:</strong> <input type="number" [(ngModel)]="player.age"></p>
+        <p><strong>Position:</strong> <input type="text" [(ngModel)]="player.position"></p>
+        <p><strong>Nationality:</strong> <input type="text" [(ngModel)]="player.nationality"></p>
+        <p><strong>Details:</strong> <textarea [(ngModel)]="player.details"></textarea></p>
       </div>
-    </section>
+      <div class="buttons-edit">
+        <button class="edit-btn" (click)="playerEdited()">Save</button>
+      </div>
+    </div>
+  </section>
     
