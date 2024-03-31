@@ -1,54 +1,55 @@
-.edit{
-    padding: 1.5em;
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
   }
   
-  .edit-side{
-      background-color: white;
-      border-radius: 25px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-      padding: 1em 0 ;
-      width: 500px;
-      margin: 0 auto;
-      color: black;
-  }
-  .edit-side img{
-      width: 80%;
-      height: 200px;
-      border-radius: 25px;
-      overflow: hidden;
-      object-fit: fill;
-      margin-bottom: 1em;
-  }
-  .info{
-      padding: 1em;
-  }
-  .info p{
-      padding: 0.3em;
-  }
-  .edit-side h3{
-      padding-bottom: 1em;
-  }
-  .edit-side p:nth-child(6){
-      padding-bottom: 2em;
-  }
-  .buttons-edit{
-      display: flex;
-      gap: 1em;
+  form {
+    width: 300px; 
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    border-radius: 8px;
+    font-size: 16px; 
+    border: 2px solid black;
   }
   
-  .buttons-edit button{
-      cursor: pointer;
-      border-radius: 15px;
-      padding: 0.5em 1em;
-      font-weight: 500;
-      font-size: 1em;
+  form div {
+    margin-bottom: 10px;
   }
-  .buttons-edit button:hover{
-      background-color: red;
+  
+  label {
+    display: block;
+    font-weight: bold;
   }
-  .buttons-edit button:first-child:hover{
-      background-color: rgb(162, 214, 162);
+  
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
+  select { 
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

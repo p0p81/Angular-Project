@@ -21,7 +21,6 @@ export class PlayerDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPlayerDetails();
-    console;
   }
 
   getPlayerDetails(): void {

@@ -22,7 +22,7 @@ export class AddPlayerComponent implements OnInit {
       position: ['', Validators.required],
       nationality: ['', Validators.required],
       image:[''],
-      details: ['']
+      details: [''] 
     });
   }
 
