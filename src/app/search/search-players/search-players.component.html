@@ -1,0 +1,20 @@
+
+<form >
+<div class="search-container">
+    <input type="text" placeholder="Search by position..." class="search-input" #filter>
+    <button class="search-button" (click)="filterResults(filter.value)">Search</button>
+  </div>
+</form>
+ 
+  <div class="player-grid">
+    <div *ngFor="let player of filteredPlayersList">
+      <div class="player-container">
+        <a routerLink="/team/catalog/details/{{player._id}}">
+          <img [src]="player.image" alt="Player Image">
+        </a>
+        <h3>{{player.name}}</h3>
+        <a routerLink="/team/catalog/details/{{player._id}}"> More Info </a>
+      </div>
+    </div>
+  </div>
+  

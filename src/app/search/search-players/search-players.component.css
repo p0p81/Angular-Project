@@ -39,9 +39,8 @@
   .player-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 60px; 
-    padding: 70px;
-    margin-bottom:3em;
+    gap: 20px; 
+    padding: 20px;
     box-sizing: border-box;
   }
   .player-container a{
@@ -56,4 +55,51 @@
   .player-grid a {
     text-decoration: none;
     color: black;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .search-input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .player-container {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .player-container:hover {
+    transform: translateY(-5px);
+  }
+  .search-button {
+    padding: 10px 30px;
+    margin-left: 5px;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid #ccc;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
   }

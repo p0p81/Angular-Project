@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, SlicePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { TeamRoutingModule } from './team-routing.module';
@@ -22,7 +22,8 @@ import { EditPlayerComponent } from './edit-player/edit-player.component';
     CommonModule,
     ReactiveFormsModule,
     TeamRoutingModule,
-    FormsModule
+    FormsModule,
+    SlicePipe
   ]
 })
 export class TeamModule { }
