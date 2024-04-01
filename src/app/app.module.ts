@@ -14,6 +14,7 @@ import { appInterceptorProvider } from './app.interceptor';
 import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home/home.component';
 import { TeamModule } from './team/team.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 // import { LoaderComponent } from './spinner/loader/loader.component';
 
 
@@ -25,6 +26,7 @@ import { TeamModule } from './team/team.module';
     AppComponent,
     MainComponent,
     PlayersComponent,
+    NotFoundComponent,
     // LoaderComponent,
  
 //  HomeComponent
@@ -37,7 +39,7 @@ import { TeamModule } from './team/team.module';
     SharedModule,
     HttpClientModule,
     AppRoutingModule,
-    TeamModule,
+    
 
     HomeModule
   ],

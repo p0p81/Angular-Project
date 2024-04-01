@@ -1,0 +1,34 @@
+.page-field {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/assets/media/b3a7d160338689.Y3JvcCwzMDcyLDI0MDQsMTQ0LDA.png') center center;
+    background-size: cover; 
+  }
+  
+  .not-found {
+    text-align: center;
+    color: white; 
+  }
+  
+  .error-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .error-text a {
+    color: blue;
+    text-decoration: underline;
+  }
+  @keyframes colorChange {
+    0% { color: white; }
+    50% { color: red; }
+    100% { color: white; }
+  }
+  
+  .error-text {
+    font-size: 24px;
+    font-weight: bold;
+    animation: colorChange 5s infinite; 
+  }

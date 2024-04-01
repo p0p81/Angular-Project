@@ -47,7 +47,7 @@ export class PlayerDetailsComponent implements OnInit {
     if (this.id) {
       if (confirm('Confirm delete!')) {
         this.teamService.deletePlayer(this.id).subscribe({
-         next:()=>{this.router.navigate(['/catalog'])} 
+         next:()=>{this.router.navigate(['/team/catalog'])} 
         }),
         (error: any) => {
           console.error(error)

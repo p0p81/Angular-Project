@@ -4,14 +4,14 @@
 
     <nav>
       <div>
-        <a routerLink="/catalog">Players</a>
+        <a routerLink="/team/catalog">Players</a>
       </div>
 
       <!-- Logged-in users -->
       <div class="user">
        
 
-        <a *ngIf="isLoggedIn" routerLink="/create-player">Add Players</a>
+        <a *ngIf="isLoggedIn" routerLink="/team/create-player">Add Players</a>
         <a *ngIf="isLoggedIn" routerLink="/search"> Search </a>
         <a *ngIf="isLoggedIn" class="logout"id = "logoutBtn" (click)="logout()">Logout</a>
       </div>

@@ -1,17 +1,14 @@
 <div class="player-grid">
     <div *ngFor="let player of players">
         <div class="player-container">
-        <a routerLink="/catalog/details/{{player._id}}">
+        <a routerLink="/team/catalog/details/{{player._id}}">
 
             <img [src]="player.image" alt="Player Image">
     </a>
 
             <h3>{{player.name}}</h3>
-            <a routerLink="/catalog/details/{{player._id}}"> More Info </a>
-            <!-- <p><strong>Age:</strong> {{player.age}}</p>
-            <p><strong>Position:</strong> {{player.position}}</p>
-            <p><strong>Nationality:</strong> {{player.nationality}}</p>
-            <p><strong>Details:</strong> {{player.details}}</p> -->
+            <a routerLink="/team/catalog/details/{{player._id}}"> More Info </a>
+           
         </div>
     </div>
 </div>
