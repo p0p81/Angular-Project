@@ -3,7 +3,7 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from
 import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root' // Указва, че този сервиз е достъпен в коренния инжектор
+  providedIn: 'root' 
 })
 export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}

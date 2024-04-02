@@ -21,6 +21,7 @@
         "sessions": {}
     },
     "seedData": {
+  
         "courses": [
             {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -84,7 +85,21 @@
                 "_id": "391028a3-08d9-404f-bd96-0df4ee7a90a9"
             }
         ],
-        "players":[
+        "matches":[
+            {
+            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+            "matchDate": "2024-04-04",
+            "stadium": "Etihad",
+            "team1": "Man City",
+            "team2": "Arsenal",
+            "time": "15:30",
+            "image2": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png",
+            "image3": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png",
+            "_createdOn": 1711989644598,
+            "_id": "afb1e7f9-f269-41a7-9ecf-02caaf101ff5"
+        }
+    ],
+        "players": [
             {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "name": "Dennis Bergkamp",

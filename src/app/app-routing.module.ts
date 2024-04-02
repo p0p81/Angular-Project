@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchPlayersComponent } from './search/search-players/search-players.component';
 import { ErrorComponent } from './core/error/error.component';
+import { CreateMatchComponent } from './matches/create-match/create-match.component';
+
 
 const routes: Routes = [
   {
@@ -19,6 +21,10 @@ const routes: Routes = [
   {
     path: 'team',
     loadChildren: () => import('./team/team.module').then((m) => m.TeamModule),
+  },
+  {
+    path: 'create-match', component:CreateMatchComponent
+    // loadChildren: () => import('./matches/create-match/create-match.component').then((m) => m.CreateMatchComponent),
   },
   {
     path: 'search',

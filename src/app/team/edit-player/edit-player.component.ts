@@ -82,7 +82,7 @@ export class EditPlayerComponent implements OnInit {
         },
         error: (err) => {
           console.error('Failed to update player', err);
-          // Handle error: Show user-friendly message or redirect
+          
         }
       });
     }

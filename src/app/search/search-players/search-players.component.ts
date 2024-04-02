@@ -14,7 +14,7 @@ export class SearchPlayersComponent {
 
   ngOnInit(): void {
     this.fetchPlayers();
-    console.log(this.players)
+ 
   }
 
 fetchPlayers(): void {
@@ -30,9 +30,9 @@ fetchPlayers(): void {
   )
 }
 filterResults(text: string) {
-  console.log(text);
+  
   if (!text) {
-    this.filteredPlayersList = this.players;
+    this.filteredPlayersList = this.players; 
     return;
   }
 

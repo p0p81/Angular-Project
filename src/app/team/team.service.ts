@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Player } from '../types/Player';
+import { Match } from '../types/Match';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,11 @@ export class TeamService {
   editPlayer(player:Player):Observable<Player>{
     const editUrl = `${this.apiUrl}/data/players/${player._id}`
     return this.http.put<Player>(editUrl, player);
+  }
+  submitFormData(formData:Match){
+    return this.http.post<Match>(`${this.apiUrl}/data/matches`, formData)
+  }
+  getMatches(){
+    return this.http.get<Match[]>(`${this.apiUrl}/data/matches`)
   }
 }

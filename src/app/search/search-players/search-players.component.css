@@ -5,7 +5,7 @@
     margin: 20px auto;
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     cursor: pointer; 
     transition: box-shadow 0.3s ease;
     height: 100%; 
@@ -39,8 +39,8 @@
   .player-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    padding: 20px;
+    gap: 60px; 
+    padding: 70px;
     box-sizing: border-box;
   }
   .player-container a{
@@ -73,8 +73,8 @@
   .player-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 60px;
+    padding: 70px;
   }
   
   .player-container {
@@ -82,11 +82,12 @@
     border: 1px solid #eee;
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 1.2s ease, box-shadow 0.3s ease;
   }
   
   .player-container:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05); 
+    box-shadow: 0 10px 30px rgba(0,0,0,2.6);
   }
   .search-button {
     padding: 10px 30px;
@@ -102,4 +103,10 @@
   
   .search-button:hover {
     background-color: #0056b3;
+  }
+  .no-results {
+    text-align: center; 
+    font-size: 2em; 
+    color: white; 
+    padding: 20px; 
   }

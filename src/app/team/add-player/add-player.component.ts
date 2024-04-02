@@ -30,9 +30,27 @@ export class AddPlayerComponent implements OnInit {
     });
   }
 
+  // createPlayer() {
+  //   if (this.addPlayerForm.valid) {
+  //     const playerData: Player = this.addPlayerForm.value;
+  //     this.teamService.createPlayer(playerData).subscribe(() => {
+  //       this.router.navigate(['/team/catalog']);
+  //       this.addPlayerForm.reset();
+  //     });
+  //   }
+  // }
+
   createPlayer() {
     if (this.addPlayerForm.valid) {
-      const playerData: Player = this.addPlayerForm.value;
+      const playerData: Player = {
+        name: this.addPlayerForm.value.name.trim(),
+        age: this.addPlayerForm.value.age,
+        position: this.addPlayerForm.value.position.trim(),
+        nationality: this.addPlayerForm.value.nationality.trim(),
+        image: this.addPlayerForm.value.image.trim(), 
+        details: this.addPlayerForm.value.details.trim() 
+      };
+  
       this.teamService.createPlayer(playerData).subscribe(() => {
         this.router.navigate(['/team/catalog']);
         this.addPlayerForm.reset();

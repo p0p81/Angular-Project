@@ -1,26 +1,17 @@
-/* .custom-loader-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1); 
 
-  z-index: 999; 
-} */
 .custom-loader {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 8px solid #0000;
-  border-right-color: #F4694297;
+  border-right-color: #17007197;
   position: fixed;
   animation: s4 1s infinite linear;
   left: 50%;
   right: 50%;
   bottom: 50%;
   top: 50%;
-  /* transform: translate(-50%, -50%); */
+  
   z-index: 1000;
 }
 

@@ -4,28 +4,53 @@
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" formControlName="name" placeholder="Name" required>
+
+        <ng-container *ngIf="editPlayerForm.get('name')?.touched">
+          <p class="error" *ngIf="editPlayerForm.get('name')?.errors?.['required']">Name required!</p>
+        </ng-container>
+
       </div>
       <div> 
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" formControlName="age" placeholder="Age" required>
+
+        <ng-container *ngIf="editPlayerForm.get('age')?.touched">
+          <p class="error" *ngIf="editPlayerForm.get('age')?.errors?.['required']">Age required!</p>
+        </ng-container>
+
       </div>
       <div>
         <label for="position">Position:</label>
         <input type="text" id="position" name="position" formControlName="position" placeholder="Position" required>
+
+        <ng-container *ngIf="editPlayerForm.get('position')?.touched">
+          <p class="error" *ngIf="editPlayerForm.get('position')?.errors?.['required']">Position required!</p>
+        </ng-container>
+
       </div>
       <div>
         <label for="nationality">Nationality:</label>
         <input type="text" id="nationality" name="nationality" formControlName="nationality" placeholder="Nationality" required>
+
+        <ng-container *ngIf="editPlayerForm.get('nationality')?.touched">
+          <p class="error" *ngIf="editPlayerForm.get('nationality')?.errors?.['required']">Nationality required!</p>
+        </ng-container>
+
       </div>
       <div>
         <label for="image">Image:</label>
-        <input type="text" id="image" name="image" formControlName="image" placeholder="Image URL">
+        <input type="text" id="image" name="image" formControlName="image" placeholder="Image URL" required>
+
+        <ng-container *ngIf="editPlayerForm.get('image')?.touched">
+          <p class="error" *ngIf="editPlayerForm.get('image')?.errors?.['required']">Image required!</p>
+        </ng-container>
+
       </div>
       <div>
         <label for="details">Details:</label>
         <textarea id="details" name="details" formControlName="details" placeholder="Details"></textarea>
       </div>
-      <button type="submit">Save</button>
+      <button type="submit" [disabled]="editPlayerForm.invalid">Save</button>
     </form>
   </div>
   

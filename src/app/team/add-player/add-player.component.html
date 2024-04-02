@@ -3,10 +3,22 @@
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" formControlName="name" placeholder="Name" required/>
+
+      <ng-container *ngIf="addPlayerForm.get('name')?.touched">
+        <p class="error" *ngIf="addPlayerForm.get('name')?.errors?.['required']">Name required!</p>
+  
+      </ng-container>
+
     </div>
     <div>
       <label for="age">Age:</label>
       <input type="number" id="age" name="age" formControlName="age" placeholder="Age" required>
+
+      <ng-container *ngIf="addPlayerForm.get('age')?.touched">
+        <p class="error" *ngIf="addPlayerForm.get('age')?.errors?.['required']">Age required!</p>
+  
+      </ng-container>
+
     </div>
     <div>
       <label for="position">Position:</label>
@@ -17,20 +29,38 @@
         <option value="Midfield">Midfield</option>
         <option value="Attack">Attack</option>
       </select>
+
+      <ng-container *ngIf="addPlayerForm.get('position')?.touched">
+        <p class="error" *ngIf="addPlayerForm.get('position')?.errors?.['required']">Position required!</p>
+  
+      </ng-container>
+
     </div>
     <div>
       <label for="nationality">Nationality:</label>
       <input type="text" id="nationality" name="nationality" formControlName="nationality" placeholder="Nationality" required>
+
+      <ng-container *ngIf="addPlayerForm.get('nationality')?.touched">
+        <p class="error" *ngIf="addPlayerForm.get('nationality')?.errors?.['required']">Nationality required!</p>
+  
+      </ng-container>
+
     </div>
     <div>
         <label for="image">Image:</label>
         <input type="text" id="image" name="image" formControlName="image" placeholder="Image" required>
+
+        <ng-container *ngIf="addPlayerForm.get('image')?.touched">
+          <p class="error" *ngIf="addPlayerForm.get('image')?.errors?.['required']">Image required!</p>
+    
+        </ng-container>
+
       </div>
     <div>
       <label for="details">Details:</label>
       <textarea id="details" name="details" formControlName="details" placeholder="Details" required></textarea>
     </div>
-    <button type="submit">Add Player</button>
+    <button type="submit" [disabled]="addPlayerForm.invalid" >Add Player</button>
   </form>
 </div>
   

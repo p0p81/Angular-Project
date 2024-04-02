@@ -21,7 +21,7 @@ export class EmailDirective implements Validator{
 
   validate(control: AbstractControl<any, any>): ValidationErrors | null {
 
-    const result = emailValidator(this.appEmail);
+    const result = emailValidator();
     return result(control);
   
   }

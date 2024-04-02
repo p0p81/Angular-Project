@@ -14,6 +14,6 @@ this.apiError$$.next(error);
   }
 
   clearError(): void {
-    this.apiError$$.next(null); // Изчистване на текущата грешка
+    this.apiError$$.next(null); 
   }
 }

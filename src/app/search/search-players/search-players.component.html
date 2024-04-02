@@ -6,8 +6,8 @@
   </div>
 </form>
  
-  <div class="player-grid">
-    <div *ngFor="let player of filteredPlayersList">
+  <div class="player-grid" *ngIf="filteredPlayersList.length > 0; else noResults">
+    <div  *ngFor="let player of filteredPlayersList; " >
       <div class="player-container">
         <a routerLink="/team/catalog/details/{{player._id}}">
           <img [src]="player.image" alt="Player Image">
@@ -16,5 +16,8 @@
         <a routerLink="/team/catalog/details/{{player._id}}"> More Info </a>
       </div>
     </div>
+   
   </div>
-  
+  <ng-template  #noResults>
+    <div class="no-results">No results</div>
+  </ng-template>

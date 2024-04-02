@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { emailValidator } from 'src/app/shared/email-validator';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
     this.loginForm  = this.fb.group({
-      email: ['', [Validators.required, Validators.email, 
+      email: ['', [Validators.required, emailValidator(), 
         Validators.minLength(8)
       ]
       ],

@@ -7,7 +7,7 @@
     <input formControlName = "email"type="email" name="email" id="email"placeholder="email" required/>
     <ng-container *ngIf="loginForm.get('email')?.touched">
       <p class="error" *ngIf="loginForm.get('email')?.errors?.['required']">Email required!</p>
-      <p class="error" *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email</p>
+      <p class="error" *ngIf="loginForm.get('email')?.errors?.['emailValidator']">Invalid email</p>
 
     </ng-container>
     <h5>Password</h5>

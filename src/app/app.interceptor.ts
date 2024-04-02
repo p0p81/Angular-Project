@@ -68,6 +68,7 @@ export class AppInterceptor implements HttpInterceptor {
         finalize(() => {
         
           this.spinnerService.requestEnded();
+          this.spinnerService.resetSpinner();
         })
       )
   }
