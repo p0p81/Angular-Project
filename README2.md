@@ -134,10 +134,10 @@ necessary details.
 details or delete it entirely.
 
 
--**Contributing**
+## Contributing
 If you'd like to contribute to the project, feel free to submit pull requests or open issues. Your feedback and contributions are highly appreciated.
 
--**License**
+## License
 This project is licensed under the MIT License.
 
 Enjoy using Arsenal fan page! If you have any questions or encounter issues, please don't hesitate to reach out.
