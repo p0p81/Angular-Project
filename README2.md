@@ -5,39 +5,26 @@
 Welcome to Arsenal fans page. This is an Angular application for managing Arsenal upcoming football matches and see players of interest and short details about them. It provides various functionalities for users to create and view matches, manage players, and perform searches within the system.
 This Angular application interacts with the SoftUni practice server, offering a seamless experience for football enthusiasts especially Arsenal fans.
 
+[![Angular](https://img.shields.io/badge/Angular-✓-blue)]() [![Angular-Material](https://img.shields.io/badge/Angular--Material-✓-important)]()  [![SoftUni Practice Server](https://img.shields.io/badge/SoftUni_Practice_Server-✓-orange)]() [![Bootstrap](https://img.shields.io/badge/Bootstrap-✓-red)]() 
 
-# Table of Contents
 
-1. [Introduction](#introduction)
-   - [Overview](#overview)
-   - [Project Setup](#project-setup)
-2. [Getting Started](#getting-started)
-   - [Server part Setup](#server-part-setup)
-   - [Client Application Setup](#client-application-setup)
-3. [Backend Server](#backend-server)
-4. [Features](#features)
-   - [Guest User View](#guest-user-view)
-   - [Authenticated User View](#authenticated-user-view)
-   - [Admin Management - CRUD operations](#admin-management---crud-operations)
-5. [Usage](#usage)
-   - [Login/Register](#loginregister)
-   - [Browse Players](#browse-players)
-   - [Add Player](#add-player)
-   - [Add Matches](#add-matches)
-   - [View More Info / Details](#view-more-info--details)
-   - [Edit/Delete Player](#editdelete-player)
-6. [Contributing](#contributing)
-7. [License](#license)
+
+
+## Test User - email: george@abv.bg ,password: 123456
+
+## Admin - email: peter@abv.bg password:123456
 
 
 ## Getting Started
 To get started with this project, follow these instructions:
 
-Server part Setup
+### Server part Setup
 
 Navigate to the Server Directory:
 
+```bash
 cd server
+```
 
 Install Server Dependencies and Start the Server: 
 
@@ -48,29 +35,40 @@ npm install
 ```bash
 npm run client
 ```
+```bash
 npm run build
+```
+```bash
 npm start
+```
 
 ### Running the Server:
 Once the server is started, it will listen for requests on:
 http://localhost:3030/
 
-## Client Application Setup:
+### Client Application Setup:
 
 Clone the Repository: You can clone the repository using the following command or 
 download it as a ZIP file and extract it on your computer.
 git clone https://github.com/p0p81/Angular-Project
 
 Navigate to the Project Directory:
+
 Use the terminal to navigate to the project directory.
 cd ngProject
 
-Install Dependencies:
+### Install Dependencies:
 
 Install all the necessary dependencies by running the following command in your terminal:
-npm install 
+
+```bash
+npm install
+```
+
 Run the Client Part: Start the Angular development server with this command:
-ng serve 
+```bash
+ng serve
+``` 
 Open the Project: Access the application by opening the following URL in a web 
 browser: http://localhost:4200
 
@@ -107,14 +105,6 @@ Our Angular project includes the following features:
 - Create -Add Matches:  Admin can add next football matches.
 
 
-Test User - 
-email: george@abv.bg 
-password: 123456
-
-
-Admin User - 
-email: peter@abv.bg 
-password:123456
 
 
 
