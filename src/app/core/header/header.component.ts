@@ -13,33 +13,27 @@ export class HeaderComponent implements OnDestroy {
   isAdmin: boolean = false;
   private subscription: Subscription;
   constructor(private userService: UserService, private router: Router) {
-    this.subscription = this.userService.user$.subscribe(user => {
-      this.isAdmin = user?._id === environment.KEY; 
+    this.subscription = this.userService.user$.subscribe((user) => {
+      this.isAdmin = user?._id === environment.KEY;
     });
   }
-  
+
   get isLoggedIn(): boolean {
-    return this.userService.isLogged
+    return this.userService.isLogged;
   }
 
-
-
-  logout(){
+  logout() {
     this.userService.logout().subscribe({
       next: () => {
         this.router.navigate(['/login']);
-        
       },
       error: () => {
         this.router.navigate(['/login']);
-
       },
     });
-    
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe(); 
+    this.subscription.unsubscribe();
   }
-
 }

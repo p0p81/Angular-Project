@@ -13,17 +13,18 @@ export class TeamService {
   private players$$ = new BehaviorSubject<Player[]>([]);
 
   constructor(private http:HttpClient) { }
+  
 
   createPlayer(playerData: Player): Observable<Player> {
     return this.http.post<Player>(`${this.apiUrl}/data/players`, playerData);
   }
+
 
   getAllPlayers(): Observable<Player[]> {
     this.http.get<Player[]>(`${this.apiUrl}/data/players`).subscribe({
       next: players => this.players$$.next(players),
       error: error => console.error('Error fetching players', error)
     })
-
   return this.players$$.asObservable()
   };
   
@@ -32,15 +33,17 @@ export class TeamService {
     return this.http.get<Player>(`${this.apiUrl}/data/players/${id}`);
   }
 
+
   deletePlayer(id: string): Observable<Player> {
     return this.http.delete<Player>(`${this.apiUrl}/data/players/${id}`);
-
   }
+
 
   editPlayer(player:Player):Observable<Player>{
     const editUrl = `${this.apiUrl}/data/players/${player._id}`
     return this.http.put<Player>(editUrl, player);
   }
+
   submitFormData(formData:Match){
     return this.http.post<Match>(`${this.apiUrl}/data/matches`, formData)
   }

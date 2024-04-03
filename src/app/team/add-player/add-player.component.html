@@ -4,6 +4,10 @@
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" formControlName="name" placeholder="Name" required/>
 
+      <div class="validator" *ngIf="addPlayerForm.get('name')?.touched && addPlayerForm.get('name')?.errors?.['whitespace']">
+      No white space allowed!
+      </div>
+
       <ng-container *ngIf="addPlayerForm.get('name')?.touched">
         <p class="error" *ngIf="addPlayerForm.get('name')?.errors?.['required']">Name required!</p>
   
@@ -13,7 +17,8 @@
     <div>
       <label for="age">Age:</label>
       <input type="number" id="age" name="age" formControlName="age" placeholder="Age" required>
-
+   
+  
       <ng-container *ngIf="addPlayerForm.get('age')?.touched">
         <p class="error" *ngIf="addPlayerForm.get('age')?.errors?.['required']">Age required!</p>
   
@@ -40,6 +45,9 @@
       <label for="nationality">Nationality:</label>
       <input type="text" id="nationality" name="nationality" formControlName="nationality" placeholder="Nationality" required>
 
+      <div class="validator" *ngIf="addPlayerForm.get('nationality')?.touched && addPlayerForm.get('nationality')?.errors?.['whitespace']">
+        No white space allowed!
+        </div>
       <ng-container *ngIf="addPlayerForm.get('nationality')?.touched">
         <p class="error" *ngIf="addPlayerForm.get('nationality')?.errors?.['required']">Nationality required!</p>
   
@@ -50,6 +58,10 @@
         <label for="image">Image:</label>
         <input type="text" id="image" name="image" formControlName="image" placeholder="Image" required>
 
+        <div class="validator" *ngIf="addPlayerForm.get('image')?.touched && addPlayerForm.get('image')?.errors?.['whitespace']">
+          No white space allowed!
+          </div>
+
         <ng-container *ngIf="addPlayerForm.get('image')?.touched">
           <p class="error" *ngIf="addPlayerForm.get('image')?.errors?.['required']">Image required!</p>
     
@@ -59,6 +71,9 @@
     <div>
       <label for="details">Details:</label>
       <textarea id="details" name="details" formControlName="details" placeholder="Details" required></textarea>
+      <div class="validator" *ngIf="addPlayerForm.get('details')?.touched && addPlayerForm.get('details')?.errors?.['whitespace']">
+        No white space allowed!
+        </div>
     </div>
     <button type="submit" [disabled]="addPlayerForm.invalid" >Add Player</button>
   </form>

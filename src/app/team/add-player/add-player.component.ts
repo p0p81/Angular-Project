@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Player } from 'src/app/types/Player';
 import { TeamService } from '../team.service';
 import { Router } from '@angular/router';
+import { notOnlyWhitespaceValidator } from 'src/app/shared/email-validator';
 
 @Component({
   selector: 'app-add-player',
@@ -22,12 +23,12 @@ export class AddPlayerComponent implements OnInit {
   ngOnInit(): void {
     
     this.addPlayerForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      age: [null, Validators.required,],
+      name: ['', [Validators.required, Validators.minLength(2),notOnlyWhitespaceValidator()]],
+      age: [null, Validators.required],
       position: ['', Validators.required],
-      nationality: ['', Validators.required],
-      image: [''],
-      details: [''],
+      nationality: ['', [Validators.required,notOnlyWhitespaceValidator()]],
+      image: ['',[Validators.required,notOnlyWhitespaceValidator()]],
+      details: ['',[Validators.required,notOnlyWhitespaceValidator()]],
     });
   }
 

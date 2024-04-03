@@ -10,3 +10,11 @@ export function emailValidator(): ValidatorFn {
     return isEmailInvalid ? null : { emailValidator: true }; 
   };
 }
+
+export function notOnlyWhitespaceValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const isWhitespace = (control.value || '').trim().length === 0;
+    const isValid = !isWhitespace;
+    return isValid ? null : { whitespace: true };
+  }
+} 

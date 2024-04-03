@@ -24,10 +24,14 @@
         placeholder="password"
         formControlName="password"
       />
+
+     
+
       <ng-container *ngIf="form.get('passGroup')?.get('password')?.touched">
         <p class="error" *ngIf="form.get('passGroup')?.get('password')?.errors?.['required']">Password required!</p>
         <p class="error" *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">Password too short!</p>
-      </ng-container>
+        
+       </ng-container>
         <h5>Repeat Password</h5>
       <input
         type="password"
@@ -50,5 +54,8 @@
       <button type="submit" [disabled]="form.invalid" 
         >Register</button>
       <p class="message">Already registered? <a routerLink="/login">Login</a></p>
+      <div class="validator" *ngIf="passGroup?.get('password')?.touched && passGroup?.get('password')?.errors?.['whitespace']">
+        No white space allowed!
+      </div>   
     </form>
   </div>

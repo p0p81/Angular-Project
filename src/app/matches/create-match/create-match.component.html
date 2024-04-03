@@ -10,12 +10,20 @@
     <!-- Stadium -->
     <input type="text" formControlName="stadium" placeholder="Stadium" required class="custom-input">
 
+    <div class="validator" *ngIf="nextGameForm?.get('stadium')?.touched && nextGameForm?.get('stadium')?.errors?.['whitespace']">
+        No white space allowed!
+    </div>  
+
     <ng-container *ngIf="nextGameForm.get('stadium')?.touched">
         <p class="error" *ngIf="nextGameForm.get('stadium')?.errors?.['required']">Stadium required!</p>
     </ng-container>
 
     <!-- Team 1 -->
     <input type="text" formControlName="team1" placeholder="Team 1" required class="custom-input">
+
+    <div class="validator" *ngIf="nextGameForm?.get('team1')?.touched && nextGameForm?.get('team1')?.errors?.['whitespace']">
+        No white space allowed!
+    </div>  
 
     <ng-container *ngIf="nextGameForm.get('team1')?.touched">
         <p class="error" *ngIf="nextGameForm.get('team1')?.errors?.['required']">Home team required!</p>
@@ -24,6 +32,10 @@
     <!-- Team 2 -->
     <input type="text" formControlName="team2" placeholder="Team 2" required class="custom-input">
 
+    <div class="validator" *ngIf="nextGameForm?.get('team2')?.touched && nextGameForm?.get('team2')?.errors?.['whitespace']">
+        No white space allowed!
+    </div>  
+
     <ng-container *ngIf="nextGameForm.get('team2')?.touched">
         <p class="error" *ngIf="nextGameForm.get('team2')?.errors?.['required']">Away team required!</p>
     </ng-container>
@@ -31,17 +43,29 @@
     <!-- Image URLs -->
     <input type="text" formControlName="time" placeholder="time" required class="custom-input">
 
+    <div class="validator" *ngIf="nextGameForm?.get('time')?.touched && nextGameForm?.get('time')?.errors?.['whitespace']">
+        No white space allowed!
+    </div>  
+
     <ng-container *ngIf="nextGameForm.get('time')?.touched">
         <p class="error" *ngIf="nextGameForm.get('time')?.errors?.['required']">Time required!</p>
     </ng-container>
 
     <input type="text" formControlName="image2" placeholder="Image 2 URL" required class="custom-input">
 
+    <div class="validator" *ngIf="nextGameForm?.get('image2')?.touched && nextGameForm?.get('image2')?.errors?.['whitespace']">
+        No white space allowed!
+    </div>  
+
     <ng-container *ngIf="nextGameForm.get('image2')?.touched">
         <p class="error" *ngIf="nextGameForm.get('image2')?.errors?.['required']">Home team logo required!</p>
     </ng-container>
 
     <input type="text" formControlName="image3" placeholder="Image 3 URL" required class="custom-input">
+
+    <div class="validator" *ngIf="nextGameForm?.get('image3')?.touched && nextGameForm?.get('image3')?.errors?.['whitespace']">
+        No white space allowed!
+    </div>  
 
     <ng-container *ngIf="nextGameForm.get('image3')?.touched">
         <p class="error" *ngIf="nextGameForm.get('image3')?.errors?.['required']">Away team logo required!</p>

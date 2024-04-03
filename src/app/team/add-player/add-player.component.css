@@ -67,3 +67,6 @@
   .input-error {
     border-left-color: #ff0000;
   }
+  .validator{
+    color: red;
+  }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { emailValidator } from 'src/app/shared/email-validator';
+import { emailValidator, notOnlyWhitespaceValidator } from 'src/app/shared/email-validator';
 import { passwordMatchValidator } from 'src/app/shared/password-match';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class RegisterComponent {
   form = this.fb.group({
     email: ['', [Validators.required, emailValidator()]],  
     passGroup: this.fb.group({ 
-      password:['', [Validators.required, Validators.minLength(6)]],
+      password:['', [Validators.required, Validators.minLength(6),notOnlyWhitespaceValidator()]],
       rePassword:['', Validators.required],
     }, { validators: [passwordMatchValidator('password', 'rePassword')] })
   });

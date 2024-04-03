@@ -55,7 +55,7 @@
   
   /* Link within the message */
   .form .message a {
-    color: #ff006f;
+    color: blue;
     text-decoration: none;
   }
   
@@ -68,5 +68,9 @@
   .input-error {
     border-left-color: #ff0000;
   }
+  .validator{color: red;
+  text-align: center;
+    margin-top: 0.3em;
+}
   
   

@@ -1,5 +1,11 @@
-import { Directive, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn } from '@angular/forms';
+import { Directive, Input } from '@angular/core';
+import {
+  AbstractControl,
+  NG_VALIDATORS,
+  ValidationErrors,
+  Validator,
+  ValidatorFn,
+} from '@angular/forms';
 import { emailValidator } from '../email-validator';
 
 @Directive({
@@ -12,18 +18,13 @@ import { emailValidator } from '../email-validator';
     },
   ],
 })
-export class EmailDirective implements Validator{
-  @Input() appEmail: string []= [];
+export class EmailDirective implements Validator {
+  @Input() appEmail: string[] = [];
 
-
-  constructor() { }
-
+  constructor() {}
 
   validate(control: AbstractControl<any, any>): ValidationErrors | null {
-
     const result = emailValidator();
     return result(control);
-  
   }
-
-};
+}
