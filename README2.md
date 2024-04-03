@@ -7,6 +7,17 @@ This Angular application interacts with the SoftUni practice server, offering a 
 
 [![Angular](https://img.shields.io/badge/Angular-✓-blue)]() [![Angular-Material](https://img.shields.io/badge/Angular--Material-✓-important)]()  [![SoftUni Practice Server](https://img.shields.io/badge/SoftUni_Practice_Server-✓-orange)]() [![Bootstrap](https://img.shields.io/badge/Bootstrap-✓-red)]() 
 
+# Table of Contents
+
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+   - [Server part Setup](#server-part-setup)
+   - [Client Application Setup](#client-application-setup)
+3. [Backend Server](#backend-server)
+4. [Features](#features)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
 
 
 
