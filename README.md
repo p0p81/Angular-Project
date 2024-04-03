@@ -63,10 +63,6 @@ Clone the Repository: You can clone the repository using the following command o
 download it as a ZIP file and extract it on your computer.
 git clone https://github.com/p0p81/Angular-Project
 
-Navigate to the Project Directory:
-
-Use the terminal to navigate to the project directory.
-cd ngProject
 
 ### Install Dependencies:
 
