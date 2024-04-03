@@ -5,6 +5,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchPlayersComponent } from './search/search-players/search-players.component';
 import { ErrorComponent } from './core/error/error.component';
 import { CreateMatchComponent } from './matches/create-match/create-match.component';
+import { AdminGuard } from './auth/adminGuard.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./team/team.module').then((m) => m.TeamModule),
   },
   {
-    path: 'create-match', component:CreateMatchComponent
+    path: 'create-match', component:CreateMatchComponent,
+    canActivate:[AdminGuard]
     // loadChildren: () => import('./matches/create-match/create-match.component').then((m) => m.CreateMatchComponent),
   },
   {

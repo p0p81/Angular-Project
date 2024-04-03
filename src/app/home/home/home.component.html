@@ -1,4 +1,6 @@
-<section class="home-side" *ngFor="let match of matches">
+
+<section class="two-matches">
+<section class="home-side" *ngFor="let match of matches | slice:-2">
     <section class="one-home-card">
         <div class="top-side">
             <div class="desc">
@@ -26,4 +28,5 @@
         </div>
 
     </section>
+</section>
 </section>

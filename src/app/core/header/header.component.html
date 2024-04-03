@@ -10,8 +10,8 @@
       <!-- LoggedIn users -->
       <div class="user">
        
-        <a *ngIf="isLoggedIn" routerLink="/create-match">Add Matches</a>
-        <a *ngIf="isLoggedIn" routerLink="/team/create-player">Add Players</a>
+        <a *ngIf="isAdmin" routerLink="/create-match">Add Matches</a>
+        <a *ngIf="isAdmin" routerLink="/team/create-player">Add Players</a>
 
         <a *ngIf="isLoggedIn" routerLink="/search"> Search </a>
         <a *ngIf="isLoggedIn" class="logout"id = "logoutBtn" (click)="logout()">Logout</a>

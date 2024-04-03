@@ -1,8 +1,14 @@
+.two-matches{
+    display: flex;
+    justify-content: space-between;
+}
+
 .home-side{
     padding: 4em 0;
     background-color: transparent;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    justify-content: center;
     gap: 1em;
 }
 
@@ -88,7 +94,7 @@
     width: 60px;
     /* aspect-ratio: 1/1; */
     height: 60px;
-    object-fit: cover; 
+    object-fit: fill; 
 }
  div.desc p:nth-child(3){
     margin-right: 10px;

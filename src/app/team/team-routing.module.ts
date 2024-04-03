@@ -5,11 +5,12 @@ import { PlayersComponent } from '../players/players.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
 import { AuthGuard } from '../auth/auth.component';
+import { AdminGuard } from '../auth/adminGuard.component';
 
 const routes: Routes = [
-  { path: 'create-player', component: AddPlayerComponent, canActivate:[AuthGuard]},
+  { path: 'create-player', component: AddPlayerComponent, canActivate:[AdminGuard]},
   { path: 'catalog', component: PlayersComponent },
-  { path: 'catalog/edit/:playerId', component: EditPlayerComponent,canActivate:[AuthGuard] },
+  { path: 'catalog/edit/:playerId', component: EditPlayerComponent,canActivate:[AdminGuard] },
   { path: 'catalog/details/:playerId', component: PlayerDetailsComponent, canActivate:[AuthGuard]},
 ];
 @NgModule({

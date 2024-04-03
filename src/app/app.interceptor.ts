@@ -8,7 +8,6 @@ import {
 } from '@angular/common/http';
 import { Inject, Injectable, Provider } from '@angular/core';
 import { Observable, catchError, finalize, throwError } from 'rxjs';
-import { environment } from 'src/environments/environment.development';
 import { SpinnerService } from './spinner/spinner.service';
 import { Router } from '@angular/router';
 import { ErrorService } from './core/error/error.service';

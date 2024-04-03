@@ -40,9 +40,7 @@ import { SpinnerComponent } from './spinner/loader/loader.component';
     HttpClientModule,
     AppRoutingModule,
     SpinnerComponent,
-    
-
-    HomeModule
+    HomeModule,
   ],
   providers: [  { provide: HTTP_INTERCEPTORS,
     multi: true,

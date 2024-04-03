@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment.development';
 export class UserService {
 
   private user$$ = new BehaviorSubject<User | undefined>(undefined);
-  private user$ = this.user$$.asObservable();
+   user$ = this.user$$.asObservable();
 
   user: User | undefined;
   USER_KEY = '[user]';
